@@ -57,8 +57,8 @@ class BuildListener implements org.gradle.BuildListener {
                 }
             });
 
-            File apkDestDir = new File("${project.rootDir}");
-            if (!apkDir.exists()) {
+            File apkDestDir = new File("${project.rootDir}/${RELEASE_DIR}");
+            if (!apkDestDir.exists()) {
                 apkDestDir.mkdirs();
             }
 

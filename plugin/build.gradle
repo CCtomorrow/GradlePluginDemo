@@ -16,10 +16,11 @@ repositories {
 dependencies {
     compile gradleApi()
     compile localGroovy()
+    compile 'com.android.tools.build:gradle:1.5.0'
 }
 
 group='com.yong'
-version='1.0.3'
+version='1.0.5'
 
 uploadArchives {
     repositories {

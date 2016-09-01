@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-// 这个名字就是properties的文件名
 apply plugin: 'apk.move.plugin'
 
 android {
@@ -7,8 +6,8 @@ android {
     buildToolsVersion "24.0.2"
 
     defaultConfig {
-        applicationId "com.yong.gradleplugindemo"
-        minSdkVersion 10
+        applicationId "com.mmc.app2"
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -24,15 +23,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:appcompat-v7:24.2.0'
 }
-
-//pluginExt {
-//    p = 'app param'
-//    p2 = 'app param2'
-//    pluginExtInner {
-//        pp = 'app nestParam'
-//        pp2 = 'app nestParam2'
-//        pp3 = 'app nestParam3'
-//    }
-//}

@@ -50,15 +50,16 @@ class BuildListener implements org.gradle.BuildListener {
             apkFiles = apkDir.listFiles(new FilenameFilter() {
                 @Override
                 boolean accept(File dir, String name) {
-                    if (name.endsWith("release")) {
-                        return true;
+                    if (name.endsWith("debug.apk") ||
+                            name.endsWith("unaligned.apk")) {
+                        return false;
                     }
-                    return false;
+                    return true;
                 }
             });
 
             File apkDestDir = new File("${project.rootDir}/${RELEASE_DIR}");
-            if (!apkDestDir.exists()) {
+            if (!apkDestDir.exists() || !apkDestDir.isDirectory()) {
                 apkDestDir.mkdirs();
             }
 

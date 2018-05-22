@@ -1,1 +1,1 @@
-include ':app', ':plugin', ':app2', ':lib'
+include ':apk_move_plugin'
